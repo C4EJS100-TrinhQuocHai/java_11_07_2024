@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>học lập trình</title>
+    <link rel="shortcut icon" href="../image/animal3.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <!-- 
+        table : bảng
+        -Cách tạo bảng
+         + các thẻ hay dùng trong bảng
+            + thead : phần đầu
+                + tr : hàng
+                + th : cột
+            + tbody : phần thân
+                + tr: hàng
+                + td : cột
+            + tfoot : phần chân bảng
+                + tr: hàng
+                + td: cột
+            + caption : tiêu đề của bảng
+         + các thuộc tính (property) trong bảng
+            + border: độ dày của viền
+            + cellpadding: khoảng cách từ text đến viền của cột
+            + cellspacing: khoảng cách từ viền của cột đến viền của bảng
+            + bgcolor    : màu nền cho bảng
+            + bordercolor: màu cho đường viền
+            + colspan    : gộp các cột lại với nhau
+            + rowspan    : gộp hàng
+     -->
+   
+    <table border="1" bgcolor="#ddd" bordercolor="red" cellpadding="10" cellspacing="5">
+        <caption> Quản lý học sinh </caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>TÊN LỚP</th>
+                <th>MÃ LỚP HỌC</th>
+                <th>KHÓA HỌC</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Java</td>
+                <td>JV11072024</td>
+                <td>Lập trình java</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Tổng số học sinh</td>
+                <td>4</td>
+            </tr>
+        </tfoot>
+    </table>
+    <table border="1">
+       <tbody >
+        
+            <tr>
+                <td rowspan="2">1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+               
+            </tr>
+       </tbody>
+    </table>
+</body>
+
+</html>
