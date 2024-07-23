@@ -1,0 +1,72 @@
+h1{
+    color: #2ceb2c;
+    background-color: #dbdbdb;
+    text-align:right;
+    text-transform: ;
+}
+p{
+    font-size: 50px;
+    /*
+        comment trong CSS
+        px : đơn vị css
+        rem,em, %, vh, vw...
+        responsive
+    */
+    font-weight: 900;
+    font-family:Arial, Helvetica, sans-serif;
+}
+a{
+    /* text-decoration: none; */
+    text-decoration: line-through;
+   
+}
+div{
+    /* text-transform: lowercase; */
+    text-transform: capitalize;
+}
+.background{
+    background-color: red;
+}
+body{
+    /* background-image: url("../../images/D1.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.display{
+    display: none;
+}
+.div1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.div2 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+.div{
+    display: inline-block;
+}
+.test{
+    background-color: blue;
+    width: 500px;
+    display: block;
+    height: 50px;
+}
+.box-model{
+    width: 150px;
+    height: 100px;
+    background-color: tomato;
+    /* padding: 5px; cả 4 hướng */
+    /* padding: 5px 10px; */
+    /* trên (top) dưới(bottom) 5, trái(left) phải (right) 10 */
+    /* padding: 5px 10px 15px; */
+    /* trên 5 , trái phải 10px, dưới 15px */
+    padding: 5px 10px 15px 20px;
+    /* trên 5, phải 10, dưới 15, trái 20 */
+    border: 5px solid black;
+    /* margin: 15px; */
+    margin-left: 50px;
+    margin-right: 50px;
+}

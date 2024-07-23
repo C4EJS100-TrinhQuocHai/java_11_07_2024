@@ -1,0 +1,52 @@
+*{
+  /* reset CSS đưa về trạng thái mặc định  */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h3{
+    color: yellow;
+}
+.heading1{
+    color: violet;
+}
+#content1{
+    color: tomato;
+}
+.btn{
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: tomato;
+}
+.login{
+    color: blueviolet;
+}
+.register{
+    color: blue;
+}
+#study{
+    color:yellow;
+}
+h6{
+    color: red !important;
+}
+.study-code{
+    color: violet;
+}
+h6 {
+    color: green;
+}
+/* p{
+    background-color: red;
+} */
+ .container p{
+    background-color: red;
+ }
+ h5,section,aside{
+    font-size: 40px;
+ }
+ h1{
+    color: aqua;
+ }

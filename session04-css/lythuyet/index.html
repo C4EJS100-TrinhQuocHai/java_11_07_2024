@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        h2{
+            color: green;
+        }
+        div{
+
+        }
+        .main1{
+            background-color: red;
+        }
+        .main2{
+            background-color: green;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- 
+        • CSS là gì?
+            + viết tắt cascading style sheets (ngôn ngữ làm đẹp cho trang web)
+            + khi viết file css thì đuôi phải .css
+        • Nhúng được CSS vào trang web
+            + có 3 cách nhúng CSS vào trang web
+            C1: inline   : viết CSS trực tiếp vào thẻ tag (element) luôn.
+            C2: internal : viết CSS bên trong cặp thẻ style và cặp thẻ style nên đặt
+            ở trong phần head
+            C3: external : viết CSS bên trong file có đuôi.css
+            RÚT RA, ƯU ĐIỂM NHƯỢC ĐIỂM CỦA 3 CÁCH
+            1.inline :  nhanh nhưng nó có nhược điểm là khi code nhiều mới học nhìn code
+            dễ rối!
+            2.internal  : cấu trúc gọn gàng hơn, nhưng có nhược điểm là chỉ mình file html
+            đó dùng được thôi, các file html khác không dùng được.
+            3.external  : viết code css rõ ràng, dễ maintain  (chỉnh sửa) và có thể cho các
+            file html khác dùng chung CSS được.
+            =====> bây giờ các em làm bài tập, thực hành thì nên tạo file css viết code css
+            vào trong đó!
+        • Sử dụng được CSS selector
+            selector : bộ chọn để CSS
+            định danh cho các element
+            class: cách dùng .tênclass 
+                + đối với class thì có thể dùng chung được
+                + hoặc có thể dùng riêng
+                + 1 element có thể có nhiều tên class 
+            id   : cách dùng #teenid  định danh duy nhất (giống như CCCD)
+            Mức độ ưu tiên ở trong CSS từ thấp đến cao
+            element ==> class ==> id ==> important!
+
+        • Sử dụng được CSS để tuỳ chỉnh văn bản
+        
+        • Giải thích được Box Model
+        • Trình bày được mô hình hộp (box model) trong CSS
+        • Sử dụng được CSS để điều chỉnh kích thước các thành phần
+        • Sử dụng được CSS tạo layout đơn giản
+    -->
+        <h1 style="color: red;">CSS basic!</h1>
+        <h2>  CSS internal! </h2>
+        <h3 class="heading1" id="content1">  CSS external! </h3>
+        <h3> Lorem, ipsum dolor.</h3>
+
+        <div class="main1 main3"> content1</div>
+
+        <div class="main2"> content2</div>
+
+        <button class="btn login">login</button>
+        <button class="btn register">register</button>
+        <div class="main">
+            <div class="main__product-hot">
+                <!-- danh sách sản phẩm hot -->
+            </div>
+            <!-- sales -->
+            <div class="main__products">
+                <!-- danh sách sản phẩm -->
+            </div>
+        </div>
+
+        <h6 class="study-code" id="study"> học lập trình tại rikkeiacademy</h6>
+
+        <div class="container">
+            <p> xin chào</p>
+        </div>
+        <p> tạm biệt!</p>
+
+        <h5> css basic!</h5>
+        <section> rikkei_academy!</section>
+        <aside> hello</aside>
+</body>
+</html>
