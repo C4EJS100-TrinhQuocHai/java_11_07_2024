@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 500px;
+            background-color: #dbdbdb;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: space-around;
+            /* align-items: center; */
+            /* justify-content: center; */
+            /* justify-content: center; */
+            /* 
+                 flex-direction:row ( giá trị mặc định)
+                 =row :  main-axios nằm ngang
+                      :  cross-axis nằm dọc  
+                      ==> 2 trục này luôn vuông góc với nhau
+                 = column: thì main-axios: nằm dọc
+                         : cross-axis  : nằm ngang
+                main-axis: sẽ có các thuộc tính
+                    + justify-content:
+                        giá trị :
+                        + center : chính giữa
+                        + flex-start: sắp xếp từ đầu
+                        + flex-end: sắp xếp xuống cuối
+                        + space-around : mép đầu đến item đầu =1/2 khoảng cách các item
+                        + space-beetween : ra giữa tính từ mép đầu.
+                        + space-evenly   : đều
+                CROSS-AXIS:
+                    + align-items:
+                        + center : ra giữa
+                        + flex-end: xếp ở cuối
+                        + flex-start: ở đầu
+                    + align-content:
+                    dùng giống như justify-content: nhưng ăn theo trục cross
+
+            */
+        }
+
+        .item {
+            width: 160px;
+            height: 100px;
+        }
+        
+        .item1 {
+            background-color: blue;
+            /* flex: 1; */
+            /* order: 2; */
+            /* display: flex;
+            justify-content: center; */
+            /* width: 50px; */
+        }
+
+        .item2 {
+            /* order: 3; */
+            background-color: red;
+            /* flex:2 */
+            /* width: 100px; */
+        }
+
+        .item3 {
+            background-color: violet;
+            /* flex: 3; */
+            /* order: 1; */
+            /* flex: 1; */
+        }
+         .item4 {
+            background-color: yellow;
+        } 
+        .item5 {
+            background-color: green;
+        }
+        .item6 {
+            background-color: orange;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- 
+        Flex-box : giúp tạo ra các layout theo ý muốn!
+            + flex-container : khối cha
+            + flex-item      : khối con
+
+     -->
+    <div class="container">
+        <div class="item item1">
+           1
+        </div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+    </div>
+</body>
+
+</html>
