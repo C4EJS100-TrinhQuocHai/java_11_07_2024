@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var age=15;
+
+        //    console.log(age);
+        let a = "15";
+        let b = 15;
+        b += 6;
+        b = b + 6;
+        console.log(1111, b);
+        //    console.log(11111, a%b);
+        //    let name="hoa";
+        //    console.log(name+3);
+        console.log(a != b);
+        console.log(a !== b);
+        let c = 9;
+        // console.log(c++);// 9
+        // console.log(++c);// 10
+        let result = c++ + ++c + c-- + c;
+        console.log(111, result);
+        // 9+ 11 +11 +10 
+        if (1 || 2) {
+            console.log("1 trong 2 cái đúng!");
+        }
+        console.log(111111111, -1 || NaN || null || 0 || false);
+        console.log(22222, -1 && NaN && null && 0 && false);
+        let isCheck = confirm("bạn đủ 18 tuổi chưa!");
+        if (isCheck) {
+            console.log("đủ tuổi làm cccd");
+        } else {
+            console.log(0);
+        }
+        let age = prompt("mời bạn nhập tuổi!");
+        console.log("age", age);
+        /* cho người dùng nhập 3 môn hóa văn anh -tính điểm trung bình*/
+        let monHoa = +  prompt("mời nhập hóa");
+        let monVan = +  prompt("mời nhập văn");
+        let monAnh = +  prompt("mời nhập anh");
+        // 6+7+8
+      
+        let tb=(monHoa+monAnh+monVan)/3;
+        console.log("điểm trung bình là",tb);
+
+
+    </script>
+</body>
+
+</html>
