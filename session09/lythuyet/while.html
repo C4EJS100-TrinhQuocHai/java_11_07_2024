@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        vòng lặp while
+        cú pháp
+            while(condition){
+                // thân while
+            }
+        luồng hoạt động
+            đầu tiên kiểm tra điều kiện
+             + nếu thỏa mãn chạy thân
+                + chạy xong thân lại quay về kiểm tra điều kiện
+                + ...
+             + không thỏa mãn dừng chương trình luôn
+
+     -->
+            <script>
+                let pass="1234";
+                let confirmPassword=prompt("mời nhập mật khẩu!");
+                // phải có biến đếm 
+                // nếu nhập sai thì tăng biến đếm lên 
+                let index=1;
+                while(pass!=confirmPassword){
+                   confirmPassword=prompt("mật khẩu sai nhập lại!");
+                   index++;
+                   if(index==5){
+                    console.log("bạn nhập quá số lần!");
+                    break;
+                   }
+                }
+                console.log("đúng!");
+            </script>
+</body>
+</html>

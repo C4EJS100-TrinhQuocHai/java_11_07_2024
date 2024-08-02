@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            switch-case:
+               + cú pháp
+                    + key là giá trị đưa vào
+                    + value giá trị
+                        + nếu key === value thì sẽ ăn vào case đấy
+               + luồng thực thi
+         */
+        /* viết chương trình cho người dùng nhập vào số 
+        nếu nhập 3, 5, 7 in ra ngày đi học
+        else thì  nghỉ học
+       
+          */
+        let day = +prompt("mời nhập số!")
+      /*   switch (day) {
+            // kiểm tra === 
+            case 3:
+            case 5:
+            case 7:
+                console.log("đi học");
+                break;
+            default:
+                console.log("nghỉ học");
+        } */
+         switch (day==3||day==5||day==7||day==0) {
+                // kiểm tra === 
+                case true:
+                console.log("đi học");
+                break;
+                default:
+                    console.log("nghỉ học");
+                
+            }
+           
+    </script>
+</body>
+
+</html>
