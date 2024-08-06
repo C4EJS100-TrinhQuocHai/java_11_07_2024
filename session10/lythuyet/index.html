@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // khai báo mảng chứa danh sách sinh viên
+
+        let students = [];
+        // thêm phần tử vào trong mảng
+        /* 
+            1. dùng phương thức push();
+         */
+        //  let hoa="nam"
+        students.push("hoa");
+        students.push("hồng");
+        // ["hoa","hồng"]
+        // muốn thêm vào đầu thì làm thế nào? dùng unshift();
+        students.unshift("nam");
+        students.unshift("minh thu");
+        // thêm vào vị trí bất kì; 
+        //  ['minh thu', 'nam', 'hoa', 'hồng']
+        students.splice(2, 2, "huệ");
+
+        //['minh thu', 'nam', 'hoa', 'hồng']
+        //['minh thu','tung', 'nam', 'hoa', 'hồng']
+        // students.splice(1,0,"tùng");
+        // console.log(students);
+
+        // console.log(students[0]);
+        // console.log(students[1]);
+        // console.log(students[2]);
+
+       
+        let numbers=[1,3,5];
+        for (let i = 0; i < numbers.length; i++) {
+        //         document.write(numbers[i]);
+        //         document.write("<br>"); 
+        // }
+        //1
+        //3
+        //5
+
+
+    </script>
+</body>
+
+</html>
