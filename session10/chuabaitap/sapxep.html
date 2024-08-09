@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        các thuật toán sắp xếp
+        1. Bubble sort(): thuật toán sắp xếp nỗi bọt
+    -->
+        <script>
+            let numbers=[7,3,8,1,5,6];
+            
+            for (let i = 0; i < numbers.length-1; i++) {
+                for (let j = 0; j < numbers.length-1-i; j++) { // 1,2,3
+                        if(numbers[j]>numbers[j+1]){
+                            // tiến hành đi đổi chỗ
+                            // 3, 7
+                               let temp= numbers[j];
+                               numbers[j]= numbers[j+1];
+                               numbers[j+1]=temp;
+                        //   [numbers[j], numbers[j + 1]] = [numbers[j + 1], numbers[j]]
+                           // [7,3]=[3,7]
+                        }
+                }
+            }
+            /* 
+                [arr[j], arr[j+1]] = [arr[j+1], arr[j]]
+            */
+           let a=[5];
+           let b=[5];
+           console.log(11111,a==b);
+           
+
+            console.log("mảng sau khi sắp xếp: ",numbers);
+            
+         
+            
+        </script>
+</body>
+</html>

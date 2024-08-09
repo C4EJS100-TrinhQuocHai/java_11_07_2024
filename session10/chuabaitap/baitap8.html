@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            Viết chương trình khai báo mảng số nguyên bất kỳ, 
+            in ra tất cả các phần tử xuất hiện từ hai lần trở lên 
+            trong mảng đã khai báo.
+        */
+        /*
+             tạo một mảng số nguyên bất kì
+            INPUT : let numbers=[3,4,5,6,3,4,5,6,8,9,5,6];
+            OUTPUT: 3,4,5,6
+ 
+            giải pháp:
+            Nhật: sắp xếp theo tăng dần. so sánh 2 phần tử liền nhau
+            nếu thỏa mãn thì push vào mảng rỗng.
+            ************************
+            Thuận:
+              + tìm phần tử lớn nhất
+              + push mảng rỗng
+              + 
+            //  let numbers= [3, 3, 4, 4, 5, 5, 5, 6, 6, 6, 8, 9];
+             //  let result=[9]; 
+ 
+         */
+        // coi như đã sắp xếp thành công
+        // numbers [3,3,4,4,5,5,5,6,6,6,8,9]
+        //  let numbers= [3, 3, 4, 4, 5, 5, 5, 6, 6, 6, 8, 9];
+        //  let result=[]; // [3,4,5,5]
+        //  for (let i = 0; i < numbers.length; i++) {
+        //     if(numbers[i]==numbers[i+1]){
+        //         // trước khi push vào kiểm tra xem có trong result 
+        //         let check = result.indexOf(numbers[i]);
+        //         // indexOf trả về -1 hoặc vị trí phần tử trong mảng
+        //         if(check==-1){
+        //             result.push(numbers[i]);
+        //         }
+        //     }
+        //  }
+        //  console.log("ket quả",result);
+         let array = [1,1,1,1,1,2,2,1,4,5,4,4,7,8,4,5];
+         // dùng for lồng
+         let result=[];
+         for (let i = 0; i < array.length-1; i++) {
+            let count=0;
+            for (let j=i+1; j < array.length; j++) {
+                    if(array[j]==array[i]){
+                        count++
+                    }
+             }
+             if(count>0){
+                // kiểm tra xem có trong result rồi hay chưa
+                // nếu  chưa có thì push vào.
+                if(!result.includes(array[i])){
+                    result.push(array[i]);
+                }
+             }
+         }
+         console.log("kết quả ",result);
+         
+
+          
+        
+
+    </script>
+</body>
+
+</html>
