@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            Viết chương trình cho người dùng nhập vào 3 số, 
+            viết hàm kiểm tra để tìm ra số bé nhất và in ra số đó.
+         */
+        let number1 = +prompt("mời nhập số thứ nhất!");
+        let number2 = +prompt("mời nhập số thứ hai!");
+        let number3 = +prompt("mời nhập số thứ ba!");
+
+        function findMaxNumber(a,b,c){
+            if(a>b&a>c){
+                return `${a} lớn nhất`
+            }
+            if (b> a& b > c) {
+                return `${b} lớn nhất`
+            }
+            return `${c} lớn nhất`
+        }
+        console.log(findMaxNumber(number1, number2, number3));
+        
+        // console.log(1<2<3);// true<3 => true
+        // console.log(3>2>1);//  true>1 =>false
+        
+        
+
+    </script>
+</body>
+
+</html>
