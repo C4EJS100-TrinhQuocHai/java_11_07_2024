@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // viết hàm trả về kết quả các cặp số có tổng là 10
+        /* 
+        input: arr
+        output: [1,9];[2,8];[3,7];[4,6]
+        */
+
+        function sum(arr,variable) {
+            let result = [];
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (arr[j] + arr[i] == variable) {
+                        result.push([arr[i], arr[j]]);
+                    }
+                }
+            }
+            return result;
+        }
+        console.log(`các cặp có tổng bằng 19 là :`,sum(array,19));
+        
+
+
+    </script>
+</body>
+
+</html>

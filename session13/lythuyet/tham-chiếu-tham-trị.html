@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let a=5;
+        let b=a; //b=5;
+        a=15;
+        console.log("b",b);//b=5
+        
+        let obj1={
+            name:"Minh Thu"
+        }
+        let obj2={...obj1};// toán tử spread
+        obj1.name="Lan Phương";
+
+        console.log("obj2",obj2);//{}
+        
+
+
+        let books=[
+            {
+                name:"toán lớp 1",
+                author:"ngô bảo châu"
+            },
+            {
+                name: "toán lớp 7",
+                author: "trần phương"
+            },
+        ]
+    </script>
+</body>
+</html>

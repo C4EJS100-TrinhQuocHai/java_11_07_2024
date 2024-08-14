@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        Cho người dùng nhập vào chuỗi kí tự
+        Viết hàm kiểm tra xem tần suất xuất hiện của mỗi ký tự và in ra chúng
+        input: “Hello World”
+        output: 
+            kí tự h xuất hiện 1 lần
+            kí tự e xuất hiện 1 lần
+            kí tự l xuất hiện 3 lần
+            kí tự o xuất hiện 2 lần
+            kí tự " " xuất hiện 1 lần
+            kí tự r xuất hiện 1 lần
+            kí tự d xuất hiện 1 lần
+        ý tưởng:
+        B1: chuyển text=> array
+        B2: Duyệt for-lồng.
+    -->
+    <script>
+        // let text="hello world";
+        // let textArr=text.split("");
+        // let newArray=[];
+        // /* 
+        //     [[h,1],[e,1],[l,2],[o,1],[" ",1],[w,1]]
+        //  */
+        // for (let i = 0; i < textArr.length; i++) {
+        //     let find=false;
+        //    for (let j = 0; j < newArray.length; j++) {
+        //         if(newArray[j][0]==textArr[i]){
+        //             newArray[j][1]++;
+        //             find=true;
+        //             break;
+        //         }
+        //    }
+        //    if(!find){
+        //         newArray.push([textArr[i],1]);
+        //    }
+        // }
+        // console.log(111111,newArray);
+
+        let texts = "hello world";
+        let numbers=[1,1,1,1,2,2,1,2,4,4,1,1,2,4,1,1,1,3,3,4];
+        console.log(222222,[...new Set(numbers)]);
+        
+        let result= [...new Set(texts)];
+        // spread.
+        console.log(11111,result);
+
+        /* 
+        ["h","e","l","l","o",'',"w","o","r","l","d"];
+        */
+        let filterText= ["h","e","l","o",' ',"w","r","d"];
+        let arr = texts.split("");
+        for (let i = 0; i < filterText.length; i++) {
+            let count=0;
+          for (let j = 0; j < texts.length; j++) {
+            if(filterText[i]==texts[j]){
+                count++;
+            }
+          }
+          console.log(`kí tự ${filterText[i]} xuất hiện ${count} lần`);
+          
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let student={
+            name:"hồng lan",
+            age:20,
+            address:"hà nội",
+            sayHello:()=>{
+            },
+        };
+        
+        student.gender="female";
+        student["email"]="lan@gmail.com";
+        // in ra các giá trị thuộc tính
+        // for (const key in student) {
+        //     console.log("key",student[key]);
+        // }
+        // student.name="lan phương";
+        delete student.age;
+        console.log("11111",student);
+
+        let student1 = { name: 'Alice', age: 30, city: 'Ha Noi' }
+            let { city, ...newPerson } = student1
+            
+            console.log(3333,newPerson)
+
+            let array=[0,2,3,5];
+            //destructoring
+            let [number1,number2]=array
+        
+       
+        
+        
+    </script>
+</body>
+</html>
