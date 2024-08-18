@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            border-radius: 10px;
+            padding: 5px;
+            border: 1px solid black;
+            outline: none;
+        }
+
+        button {
+            border: none;
+            background-color: rgb(9, 231, 27);
+            border-radius: 15px;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="student" type="text" value="">
+    <button id="btn" onclick="addStudent()">Add Item </button>
+
+
+    <ul id="list">
+        <!-- <li>1</li>
+        <li>2</li>
+        <li>3</li> -->
+    </ul>
+    <script>
+
+
+        // document.addEventListener("keydown", (event) => {
+        //     console.log(111111, event.keyCode);
+        //     if (event.keyCode == 13) {
+        //         addStudent();
+        //     }
+
+        // })
+        /* 
+            Các bước làm bài toán
+            B1: khi nhấn  vào button add item sẽ tạo event
+            B2: lấy giá trị của người dùng nhập
+            B3. tạo mảng để chứa danh sách học sinh
+            B4. tạo đối tượng học sinh
+                gồm các thuộc tính
+                {
+                    name:"",
+                    id:"",
+                }
+            B5. push đối tượng học sinh vào chứa danh học sinh 
+            B6. tạo hàm render ra giao diện.
+        */
+        // console.log(null.length);
+
+        let students = JSON.parse(localStorage.getItem("students")) || [];
+        let flag = -1;
+        // khai báo hàm add học sinh
+        function addStudent() {
+
+            // console.log("ĐÃ GỌI HÀM!");
+            let valueInput = document.getElementById("student").value;
+            console.log("giá trị người dùng nhập", valueInput);
+            let student = {
+                name: valueInput,
+                id: Math.floor(Math.random() * 99999999) + new Date().getMilliseconds()
+            }
+            // console.log("student", student);
+            if (flag != -1) {
+                //thực hiện edit
+                students[flag] = { ...student, id: students[flag].id };
+                flag = -1;
+                document.getElementById("btn").innerHTML = "Add item";
+                document.getElementById("student").value = "";
+                renderStudent();
+                return;
+            }
+            students.push(student);
+            localStorage.setItem("students", JSON.stringify(students));
+            // gọi hàm render
+            renderStudent();
+            document.getElementById("student").value = "";
+        }
+        // tạo hàm render
+        function renderStudent() {
+            let html = "";
+            for (let i = 0; i < students.length; i++) {
+                html += `
+                    <li>
+                        ${students[i].name}
+                        <button onclick="deleteStudent(${students[i].id})">delete</button>
+                        <button onclick="editStudent(${students[i].id})">edit</button>
+                     </li>`
+            }
+            document.getElementById("list").innerHTML = html;
+        }
+        renderStudent();
+        // tạo hàm xóa 
+        function deleteStudent(idUser) {
+            // console.log("giá trị id của phần tử cần xóa", idUser);
+            let confirmDelete = confirm("bạn có chắc chắn muốn xóa hay không?");
+            if (confirmDelete) {
+                for (let i = 0; i < students.length; i++) {
+                    if (students[i].id == idUser) {
+                        students.splice(i, 1);
+                        //  sau khi xóa xong  phải gọi hàm render
+                        renderStudent();
+                    }
+                }
+            }
+        }
+        // tạo hàm edit
+        function editStudent(idUser) {
+            let index = students.findIndex((item) => {
+                return item.id == idUser;
+            })
+            // đưa giá trị lên ô input
+            document.getElementById("student").value = students[index].name;
+            // đổi giá trị nút button
+            document.getElementById("btn").innerHTML = "Edit Item";
+            flag = index;
+
+        }
+    </script>
+</body>
+
+</html>

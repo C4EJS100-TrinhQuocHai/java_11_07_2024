@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // lưu trữ dữ liệu phía trình duyệt.
+        /* 
+            cách lưu
+            cách lấy về
+            cập nhật
+            xóa : localStorage.removeItem("")
+        */
+        localStorage.setItem("age", 15);
+        localStorage.setItem("fullName", "trịnh tuấn vũ");
+        // khi lưu kiểu dữ liệu array và object thì phải chuyển sang định dạng
+        // JSON : JSON.stringify()
+        let students = [
+            {
+                name: "hoa"
+            }
+        ]
+        // localStorage.setItem("students", JSON.stringify(students));
+        let data = JSON.parse(localStorage.getItem("students"));
+        localStorage.removeItem("age");
+        localStorage.clear();
+        // parse
+    </script>
+</body>
+
+</html>

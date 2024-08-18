@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        ul {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <button>pre </button>
+    <ul id="list">
+        <!-- <li><button>1</button></li>
+        <li><button>2</button></li>
+        <li><button>3</button></li>
+        <li><button>4</button></li>
+        <li><button>5</button></li> -->
+    </ul>
+    <button onclick="next()">next</button>
+    <script>
+        let numbers = [1, 2, 3, 4, 5];
+        function next() {
+            console.log(1111);
+
+            // [2,3,4,5,1]
+            // xóa đầu tiên và lấy ra giá trị
+            let item = numbers.shift();
+            numbers.push(item);
+            render();
+
+        }
+        function render() {
+            let html = "";
+            for (let i = 0; i < numbers.length; i++) {
+                html += ` <li><button>${numbers[i]}</button></li>`
+            }
+            document.getElementById("list").innerHTML = html;
+        }
+        render();
+
+    </script>
+</body>
+
+</html>
